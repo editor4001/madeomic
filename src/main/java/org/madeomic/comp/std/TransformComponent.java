@@ -1,24 +1,23 @@
 package org.madeomic.comp.std;
 
+import org.joml.Matrix4d;
 import org.madeomic.GameObject;
 import org.madeomic.util.Component;
 
-import java.awt.geom.AffineTransform;
-
 public class TransformComponent extends Component {
-    private AffineTransform transform;
+    Matrix4d transform;
 
     public TransformComponent(GameObject parent) {
         super(parent);
 
-        transform = new AffineTransform();
+        transform = new Matrix4d();
     }
 
-    public AffineTransform getTransform() {
+    public Matrix4d getTransform() {
         return transform;
     }
 
-    public void setTransform(AffineTransform transform) {
+    public void setTransform(Matrix4d transform) {
         this.transform = transform;
     }
 }
